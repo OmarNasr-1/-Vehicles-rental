@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/ico1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fe62ca82bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/login.css"/>
+
+    <title>Sign up</title>
+  </head>
+  <body>
+    <div class="container m-auto mt-5 logIN">
+      <div class="signIN-content">
+        <h3>HELLO , <i class="fa fa-smile-o" aria-hidden="true"></i></h3>
+        <p class="fs-5 text-uppercase ">
+          " if you have an account , just LOGIN "
+        </p>
+      </div>
+      <form class="w-75 m-auto needs-validation" novalidate>
+          <div class="col-md-6">
+            <input
+              class="form-control my-2"
+              placeholder="Name@email.com"
+              type="text"
+              id="email"
+              name="email"
+              value=""
+              required
+            />
+            <div class="invalid-feedback">Email is required</div>
+          </div>
+
+
+          
+          <div class="col-md-6">
+            <input
+              class="form-control my-2  "
+              placeholder="Enter password"
+              type="password"
+              id="password"
+              name="password"
+              value=""
+              required
+            />
+            <div class="invalid-feedback">Password is required</div>
+          </div>
+
+          <div class="col-md" id="incorrect"></div>
+
+          <button
+            type="submit"
+            class="btn w-25 m-auto my-3 col-md-6"
+            id="submitLogin"
+            onclick="login()"
+          >
+            Login 
+          </button>
+          <div class="log-btn">
+            <p class="text-center fs-4">
+              Or Creat New One  :
+              <a href="signup.html">Sign-Up <i class="fa fa-user-secret" aria-hidden="true"></i> </a>
+            </p>
+          </div>
+         
+        </form>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/login.js"></script>
+  </body>
+</html>

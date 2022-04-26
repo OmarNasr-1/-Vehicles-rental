@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="stylesheet" href="rent/css/bootstrap.min.css">
+      <link rel="stylesheet" href="rent/css/all.min.css">
+      <link rel="stylesheet" href="rent/css/style.css">
+      <link rel="stylesheet" href="rent/css/dp-light.css">
+      <title>modern academy 2022|Car Rental project</title>
+    </head>
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+      <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+      </div>  
+    <!-- ***** Preloader End ***** -->
+
+      <!-- Icon Top -->
+      <div id="back-top" class="back-top">
+        <a href="#">
+          <img src="https://img.icons8.com/cute-clipart/64/000000/up-squared.png" />
+        </a>
+      </div>
+      
+      <header >
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+              <a class="navbar-brand text-white fs-5" href="#"> <span>car</span>  rental</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-ico"><i class="fa fa-bars" aria-hidden="true"></i>
+                  </span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav mx-auto">
+                      <li class="nav-item">
+                          <a class="nav-link active" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="rent.html"><span> rent noww</span></a>
+                      </li>
+              
+                    <li class="nav-item dropdown ms-4">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa fa-user" aria-hidden="true"></i>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="login.html">login</a></li>
+                        <li><a class="dropdown-item" href="profile.html">profile settings</a></li>
+                        <li><a class="dropdown-item" href="#">my booking</a></li>
+                        <li><a class="dropdown-item" href="admin/admin-login.html">admin</a></li>
+                        <li><a class="dropdown-item" onclick="logout()">logout</a></li>
+                      </ul>
+                  </li>
+                    <div id="userName" class="userNameProfile">
+                        
+                    </div>
+                  </ul>
+           
+              
+                      
+              
+                 
+              </div>
+          </div>
+        </nav>
+      </header> 
+      
+
+      <section id="Content" class="all-content">
+        <div class="about position-relative col-md-12">
+          <h1>  Book </h1>
+          <h3 class="position-absolute w-100 h-100">Now <div class="border"></div></h3>
+        </div>
+        <p class="w-50 m-auto text-center my-5 text-muted">Please fill out the form in a correct way,and we will contact you as soon as possible.</p>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+                  <form>
+                    <input type="text"  class="form-control mb-4"  name="Pick-up location" required placeholder="Pick-up location"> 
+
+                    <input type="text"  class="form-control mb-4"  name="Return location" required placeholder="Return location"> 
+
+                    <input type="text" id="input-pop"    class="form-control mb-4"  name="Pick-up date/time" required placeholder="Pick-up date/time">
+
+                    <input type="text" id="input-poop"   class="form-control mb-4"  name="Return date/time" required placeholder="Return date/time">
+                    
+                    <textarea name="message" class="form-control mb-4" rows="1" placeholder="message"></textarea> 
+
+
+                                                 <!-- used by backend -->
+                    
+                    <input type="text"  id ="Car_id"  class="form-control mb-4  invisible"  name="Car Id" disabled required >
+
+                    <input type="text" id ="UserToken"  class="form-control mb-4 invisible"  name="User Token" disabled required >
+
+                    <!-- <label class="labell">Car Name</label>
+                    <input type="text"  id ="Car_name"  class="form-control mb-4"  name="Car Name" disabled required placeholder="Car Name" > -->
+
+                     <div class="buttonn text-center">
+                        <button type="submit" class="btn btn-info py-3 rounded-pill px-5 text-white"><a href="#"></a>submit</button>
+                      </div>
+                  </form>
+            </div>
+
+            <div class="col-md-6">
+              <div class="photo">
+                <img id="Car_photo" src="" class="w-100">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="inner-content">
+                <p>Copyright © 2022 by:<a href="#">carrental | modern academy</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+
+
+    <script src="rent/js/popper.min.js"></script>
+    <script src="rent/js/bootstrap.min.js"></script>
+    <script src="rent/js/jquery-3.6.0.js"></script>
+    <script src="rent/js/datepicker.js"></script>
+    <script src="rent/js/booking.js"></script>
+      
+  </body>
+</html>

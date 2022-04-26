@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/ico1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fe62ca82bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/login.css"/>
+
+    <title>Sign up</title>
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="signUp-content">
+        <h3>Hi, USER <i class="fa fa-user-circle" aria-hidden="true"></i></h3>
+        <p class="fs-5 text-uppercase ">
+          "If you do not have an account, you can create a new account now"
+        </p>
+      </div>
+    <form class="needs-validation" novalidate>
+      <div class="row g-3 mt-3 w-75 m-auto mt-3 ">
+        <div class="col-md-6">
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"    
+            class="form-control"
+            placeholder="Enter Your First Name"
+            value=""
+            required
+          />
+          <div class="invalid-feedback">FirstName is required</div>
+          <div class="valid-feedback">Done</div>
+          
+           
+        </div>
+
+        <div class="col-md-6">
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            class="form-control"
+            placeholder="Enter Your Last Name"
+            value=""
+            required
+          />
+          <div class="invalid-feedback">LastName is required</div>
+        </div>
+
+        <div class="col-md-12">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Name@email.com"
+            value=""
+            required
+          />
+          <div class="invalid-feedback">Email is required</div>
+        </div>
+
+        <div class="col-md-12">
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            class="form-control"
+            placeholder="Enter Your phone"
+            value=""
+            required
+          />
+          <div class="invalid-feedback">phone is required</div>
+        </div>
+
+        <!-- <div class="col-md-12">
+            <input
+              type="text"
+              name="role"
+              id="role"
+              class="form-control"
+              placeholder="Enter Your role"
+              value=""
+              required
+            />
+            <div class="invalid-feedback">role is required</div>
+          </div> -->
+
+        <!-- <div class="col-md-12">
+            <input
+              type="number"
+              name="age"
+              id="age"
+              class="form-control"
+              placeholder="Enter Your age"
+              value=""
+              required
+            />
+            <div class="invalid-feedback">age is required</div>
+          </div> -->
+
+        <div class="col-md-6">
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            required
+            placeholder="Create Password"
+            value=""
+          />
+          <div class="invalid-feedback">Password is required</div>
+        </div>
+
+        <div class="col-md-6">
+          <input
+            type="password"
+            class="form-control"
+            id="cpassword"
+            name="cpassword"
+            required
+            placeholder="Confirm Password"
+            value=""
+          />
+          <div class="invalid-feedback">Password is required</div>
+        </div>
+
+        <div class="col-md-12" id="exist"></div>
+
+        <button
+          class="btn  w-50 m-auto"
+          type="submit"
+          id="sumbitBtn"
+          onclick="signUp()"
+        >
+          Sign up
+        </button>
+       <div class="log-btn">
+        <p class="text-center">
+           If You have an account :  
+          <a href="Login.html">Log-In <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+        </p>
+       </div>
+    
+
+      </div>
+    </form>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/signup.js"></script>
+  </body>
+</html>
