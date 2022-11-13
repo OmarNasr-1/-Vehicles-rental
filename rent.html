@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>modern academy 2022|Car Rental project</title>
+    <title>modern academy 2022|vehicles Rental project</title>
 
 
     <link rel="stylesheet" href="rent/css/bootstrap.min.css">
     <link rel="stylesheet" href="rent/css/all.min.css">
-    <link rel="stylesheet" href="rent/css/style.css">
+    <link rel="stylesheet" href="rent/css/animate.css">
+    <link rel="stylesheet" href="rent/css/animate.compat.css">
     <link rel="stylesheet" href="rent/css/dp-light.css">
+    <link rel="stylesheet" href="rent/css/style.css">
   </head>
 
   <body>
@@ -32,7 +34,7 @@
     <header >
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand text-white fs-5" href="#"> <span>car</span>  rental</a>
+            <a class="navbar-brand text-white fs-5" href="#"> <span>vehicles</span>  rental</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-ico"><i class="fa fa-bars" aria-hidden="true"></i>
                 </span>
@@ -58,10 +60,8 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <li><a class="dropdown-item" href="login.html">login</a></li>
-                      <li><a class="dropdown-item" href="signup.html">Regiseration</a></li>
                       <li><a class="dropdown-item" href="profile.html">profile settings</a></li>
-                      <li><a class="dropdown-item" href="#">my booking</a></li>
-                      <li><a class="dropdown-item" href="admin/admin-login.html">admin</a></li>
+                      <li><a class="dropdown-item" href="mybooking.html">my booking</a></li>
                       <li><a class="dropdown-item" onclick="logout()">logout</a></li>
                     </ul>
                   </li>
@@ -85,36 +85,37 @@
     <section id="pageHead">
       <img src="./rent/images/img3.jpg" class="">
       <div class="pageHead-text">
-        <h1>Rent Best <span>Cars</span> , Now</h1>
+        <h1>Rent Best <span>Vehicles</span> , Now</h1>
         <h2>Esay Rent</h2>
       </div>
     </section>
     <a href="#cars" class="down-icon position-absolute"> <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
     <section id="cars">
       <div class="background">
-          <div class="about position-relative col-md-12 mt-0">
-              <h1>FIND</h1>
-              <h3 class="position-absolute w-100 h-100"> The Best Car For You<div class="border"></div></h3>
+          <div class=" wow backInRight about position-relative col-md-12 mt-0"data-wow-duration="3s">
+              <h1 class="renth1opicity">FIND</h1>
+              <h3 class="wow  backInLeft position-absolute w-100 h-100" data-wow-duration="4s"> The Best vehicles For You<div class="border"></div></h3>
             </div>
-            <p class="w-50 m-auto text-center my-5  paragraf ">Mauris at tempus mi, ut iaculis dui. Integer laoreet mattis justo nec pretium. Ut nibh elit, fermentum vel hendrerit vel, dictum nec velit. Morbi volutpat suscipit.</p>
+            <p class="wow backInRight w-50 m-auto text-center my-5  paragraf"data-wow-duration="4s">Click the details button to find out more information, then you can complete the booking process and it must be 24 hours before the booking date.</p>
+
     
           <div class="container">
 
-              <input onkeyup="search(this.value)" class="form-control my-5 w-50 m-auto" placeholder="Search By Car Name">
+              <input onkeyup="search(this.value)" class="form-control my-5 w-50 m-auto" placeholder="Search By vehicles Name Or City">
 
-              <div class="row" id="reciptsRow">
+              <div class="row wow backInRight" id="reciptsRow" data-wow-duration="4s">
 
               </div>
           </div>
 
-
+         
 
           <!-- Modal -->
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
               <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Car Rental</h5>
+                      <h5 class="modal-title" id="staticBackdropLabel">Vehicles Rental</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body" id="recipeData">
@@ -147,7 +148,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="inner-content">
-              <p>Copyright © 2022 by:<a href="#">carrental | modern academy</a></p>
+              <p>Copyright © 2022 by:<a href="#">Vehicles rental | modern academy</a></p>
             </div>
           </div>
         </div>
@@ -159,6 +160,7 @@
     <script src="rent/js/bootstrap.min.js"></script>
     <script src="rent/js/jquery-3.6.0.js"></script>
     <script src="rent/js/datepicker.js"></script>
+    <script src="rent/js/wow.min.js"></script>
     <script src="rent/js/main.js"></script>
   </body>
 

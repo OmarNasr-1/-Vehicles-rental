@@ -13,6 +13,17 @@ cols +=
   <div class="profile-h1">
     <span class="profile-span"><i class="fa fa-mobile m-2" aria-hidden="true"></i>Phone :</span> <h3 class="mt-2"> ${profile.phone}</h3>
   </div>
+  <div class="profile-h1">
+  <span class="profile-span"><i class="fa fa-user-secret m-2" aria-hidden="true"></i>rest password :</span>
+   <h3 class="mt-2"> 
+      <a class="btn btn-outline-info fs-5" href="forget-password.html">REST...</a>
+   </h3>
+
+</div>
+
+
+</div>
+
 
 `
 document.getElementById("profileEmail").innerHTML=cols;
@@ -95,4 +106,6 @@ $(document).ready(function(){
   });
 
 });
-// ////////////////////////////////////////////////////////////
+// //////////////////////Animation Wow//////////////////////////////////////////////////////////
+new WOW().init();
+// /////////////////////////////////////////////////////////////

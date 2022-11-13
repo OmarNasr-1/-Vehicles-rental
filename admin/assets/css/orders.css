@@ -1,0 +1,19 @@
+.colornew{
+    background-image: linear-gradient(to top left,#49d480,#344181);
+    
+
+}
+.bggg{
+    /* background-color: #85bec0; */
+    background-image: linear-gradient(to top left,#49d480,#969aaf);
+    color: #000000;
+}
+.bgg{
+  color: #d6d6d8;
+}
+
+.orderp{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}

@@ -42,7 +42,7 @@ span{
   
 }
 .receipe img{
-  height: 300px;
+  height: 330px;
   transition: all 1s;
 }
 .edit{
@@ -56,14 +56,15 @@ span{
 .receipe-caption{
   position: absolute;
   width: 100%;
-  top: 20%;
+  top: 2%;
   text-align: center;
   opacity: 0;
   transition: all 0.5s;
 }
 .receipe-caption h3,h4{
   color: #FFF ;
-} 
+  font-size: 20px;
+}
  .receipe:hover .receipe-caption{
   opacity: 1; 
   z-index: 1;
@@ -86,6 +87,13 @@ span{
   background-attachment: fixed; */
   background-color: #F7F7F7;
 }
+.informationcom{
+  border: 1px solid #00ADB5;
+  margin-bottom: 10px;
+}
+.infocomleft{
+  
+}
 
 /*//////////////////////////////////////////////////////////*/
 .about{
@@ -95,18 +103,25 @@ span{
 .about h1{
   font-size: 100px;
   color: #E2E2E3;
+  opacity: 0.3;
   /* box-shadow: 10px 10px 10px #00ADB5 ; */
+}
+.renth1opicity{
+  opacity: 1 !important;
+}
+.profileh1opicity{
+  opacity: 1 !important;
 }
 .about h3{
   top: 35px;
   left: 0;
   font-size: 50px; 
-  color: #212529;
+  color: rgb(66, 65, 65);
   
 }
 .about .border{
   width: 40px;
-  height: 2.5px;
+  height: 1px;
   background-color: #00ADB5;
   margin: auto;
   margin-top: 30px;
@@ -114,6 +129,12 @@ span{
 }
 .about:hover .border{
   width: 300px;
+}
+.colorall p{
+  font-size: 19px;
+  margin-top: 20px !important;
+  /* color: rgb(66, 65, 65) 4; */
+  color: #F7F7F7;
 }
 /* /////////////////////////////////////////////////////////////////////// */
 .all-content{
@@ -566,34 +587,6 @@ header .navbar {
     }
 }
 /* /////////////////////////////////////////////////////// */
-
-.prof{
-  display: flex;
-}
-.profile{
-  
-  padding: 20px;
-  margin-top: 5rem;
-
-}
-.profile-span{
-  font-size: 30px;
-  font-weight: bold;
-  margin-right: 3px;
-  color: #1081cc;
-}
-.profile-h1{
-  display: flex;
-  border-bottom: #217be2 .5px solid;
-  padding: 1rem;
-  
-}
-.p-img{
-
- width: 500px;
-
-}
-/* ///////////////////////////////////////////////////// */
 .userNameProfile{
   margin-top: 10px;
   margin-left: 100px;
@@ -603,4 +596,94 @@ header .navbar {
 }
 .userNameProfile:hover{
   color: #00ADB5;
+}
+/* ///////////////////////////////////////////////////// */
+.mybooking{
+ 
+  background-image: linear-gradient(to top left,#49d480,#344181);
+}
+.bggg{
+  /* background-color: #85bec0; */
+  background-image: linear-gradient(to top left,#49d480,#969aaf);
+  color: #000000;
+  font-size: 18px;
+
+}
+.bggg.td{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bgg{
+  color: #d6d6d8;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.classborder{
+  border: 1px solid #000;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* //////////////////////Edit in profile//////////////////////////// */
+#color-profile{
+  font-family: "Titillium Web", sans-serif;
+  margin-top: -100px;
+  padding: 40px;
+  padding-bottom: 100px;
+}
+.from-cont{
+  background-image: linear-gradient(to top left,#49d480,#344181);
+  /* background-color: transparent; */
+  box-shadow: -5px 2px 54px -9px rgb(0 0 0);
+  margin-top: 80px;
+  width: 800px;
+}
+#profileEmail{
+  margin: auto;
+  text-align: center;
+
+}
+.prof{
+  display: flex;
+}
+.profile{
+  padding: 20px;
+  margin-top: 5rem;
+}
+.profile-span{
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 3px;
+  color: white;
+}
+.profile-h1 h3{
+  color: white;
+}
+
+.profile-h1{
+  display: flex;
+  border-bottom: rgb(56, 55, 55) .4px solid;
+  padding: 1rem;
+  
+}
+/* .p-img{
+
+ width: 500px;
+
+} */
+
+.alert a{
+ color: white;
+ text-decoration: none;
+
+}
+.bokkingh1change{
+  font-size: 100px;
+  color: #03A9AD !important;
+  font-weight: bolder;
+  opacity: 1;
+  
 }

@@ -1,11 +1,11 @@
 
-let recipes = [];
+let cars = [];
 let links=document.querySelectorAll(".navlink");
-let currentMeal;
+let currentCar;
 
     for(var i=0;i<links.length;i++){
         links[i].addEventListener("click",function(e){
-           currentMeal=e.target.text;
+           currentCar=e.target.text;
         //   getCars(e.target.text)
         controler();
 
@@ -13,29 +13,45 @@ let currentMeal;
     }
 
 async function getCars(meal="car") {
-  let response = await fetch(`https://car-rental-eg.herokuapp.com/getOneVehicle?Vehicletype=${meal}`);
+  let response = await fetch(`https://car-rental-eg.herokuapp.com/getOneVehicle?serch=${meal}`);
   let myData = await response.json();
-  recipes = myData.data;
+  cars = myData.data;
+  console.log(cars)
   
 }
 
-function displayrecipes() {
+function displaycars() {
   let cols = '';
 
-  for (let i = 0; i < recipes.length; i++) {
+  for (let i = 0; i < cars.length; i++) {
     cols +=
       `
     <div class="col-md-4 ">
       <div class="receipe">
-          <img class="w-100 recipe-img rounded" src="${recipes[i].imageURL[0]}" alt="">
+          <img class="w-100 recipe-img rounded" src="${cars[i].imageURL[0]}" alt="">
 
           <div class="receipe-caption">
-            <h3>${recipes[i].brand}</h3>
-            <h4 >${recipes[i].model}</h4>
-            <h4 > ${recipes[i].color}</h4>
-            <h4 >${recipes[i].pricePerDay} LE Per-Day</h4>
-            <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick='getSingleRecipe(recipes[${i}]._id)' class="btn btn-info mt-2">detalis</a>
+            <h4>Brand: ${cars[i].brand}</h4>
+            <h4>Model: ${cars[i].model}</h4>
+            <h4 > ${cars[i].color}
+                      &
+                  ${cars[i].year}
+            </h4>
+            <h4>${cars[i].pricePerDay} LE Per-Day</h4>
+            <h4>Car rate: ${cars[i].VehicleRate} <svg xmlns="http://www.w3.org/2000/svg" style="color:gold;" width="16" height="16" fill="currentColor" class="bi bi-star-fill ms-1 mb-1" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+            </h4>
+            <h4>Company name: ${cars[i].companyID.CompanyName}</h4>
+            <h4>City: ${cars[i].companyID.City}</h4>
+            <h4>Company rate: ${cars[i].companyID.companyRate}<svg xmlns="http://www.w3.org/2000/svg" style="color:gold;" width="16" height="16" fill="currentColor" class="bi bi-star-fill ms-2 mb-1 " viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg> 
+            </h4>
+            
+            <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick='getSingleRecipe(cars[${i}]._id)' class="btn btn-info mt-2">detalis</a>
           </div>
+
           <div class="slider"></div>
       </div>
       
@@ -48,8 +64,8 @@ function displayrecipes() {
 
 async function controler() {
 
-  await getCars(currentMeal);
-  displayrecipes();
+  await getCars(currentCar);
+  displaycars();
 }
 
 controler();
@@ -57,12 +73,12 @@ controler();
 
 /////////////////////////////////////////////////////////////////
 
-let recipesDetals = [];
+let carsDetals = [];
 async function getSingleRecipe(recipeId) {
   let response = await fetch(`https://car-rental-eg.herokuapp.com/getOne/${recipeId}`);
-  recipesDetals = await response.json();
-  localStorage.recipesDetals = JSON.stringify(recipesDetals);
-  myData=recipesDetals.data
+  carsDetals = await response.json();
+  localStorage.carsDetals = JSON.stringify(carsDetals);
+  myData=carsDetals.data
   displaySingleRecipe();
 
 }
@@ -156,13 +172,20 @@ function displaySingleRecipe() {
      `
   }
     // ROW Three If con details//////
-    var Automatic="";
+    var Automatic="" , manual="" ;
     if(details.Automatic){
       Automatic=` 
       <div class="sectionone">
         <p>Automatic</p>
       </div>
-      `
+     `
+    }
+    if(details.manual){
+      manual=` 
+      <div class="sectionone">
+        <p>manual</p>
+      </div>
+    `
     }
 
     // ROW four If con details//////
@@ -221,13 +244,14 @@ function displaySingleRecipe() {
   
   let recipeDetalsData =
     `
-  <div class="recipesDetals">
+  <div class="carsDetals">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+      
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="${details.imageURL[0]}" class="d-block w-100 edit" alt="...">
@@ -310,7 +334,8 @@ function displaySingleRecipe() {
     <div class="parttwo">
      
       ${Automatic}
-
+      
+      ${manual}
       <div class="sectionone">
         <p>CC: ${details.CC}</p>
       </div>
@@ -351,32 +376,39 @@ function displaySingleRecipe() {
   </div>
   `;
   document.getElementById("recipeData").innerHTML = recipeDetalsData
-}
 
+}
 /////////////////////////////// SEARCH ////////////////////////////////////////
 function search(val){
   let cols = '';
 
-  for (let i = 0; i < recipes.length; i++) {
-    if(recipes[i].brand.toLowerCase().includes(val.toLowerCase()))
+  for (let i = 0; i < cars.length; i++) {
+    if(cars[i].brand.toLowerCase().includes(val.toLowerCase())||cars[i].companyID.City.toLowerCase().includes(val.toLowerCase()))
     {
       cols +=
       `
-        <div class="col-md-4 ">
-          <div class="receipe">
-              <img class="w-100 recipe-img rounded" src="${recipes[i].imageURL[0]}" alt="">
+      <div class="col-md-4 ">
+      <div class="receipe">
+          <img class="w-100 recipe-img rounded" src="${cars[i].imageURL[0]}" alt="">
 
-              <div class="receipe-caption">
-                <h3>${recipes[i].brand}</h3>
-                <h4 >${recipes[i].model}</h4>
-                <h4 > ${recipes[i].color}</h4>
-                <h4 >${recipes[i].pricePerDay} LE Per-Day</h4>
-                <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick='getSingleRecipe(recipes[${i}]._id)' class="btn btn-info mt-2">detalis</a>
-              </div>
-              <div class="slider"></div>
+          <div class="receipe-caption">
+          <h4>Brand: ${cars[i].brand}</h4>
+          <h4>Model: ${cars[i].model}</h4>
+          <h4 > ${cars[i].color}
+                    &
+                ${cars[i].year}
+          </h4>
+          <h4>City: ${cars[i].companyID.City}</h4>
+          <h4 >${cars[i].pricePerDay} LE Per-Day</h4>
+          <h4>Rate: ${cars[i].VehicleRate} <svg xmlns="http://www.w3.org/2000/svg" style="color:gold;" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg> </h4>
+            <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick='getSingleRecipe(cars[${i}]._id)' class="btn btn-info mt-2">detalis</a>
           </div>
-          
-        </div>
+          <div class="slider"></div>
+      </div>
+      
+    </div>
       `
     }
   }
@@ -483,4 +515,6 @@ bookNow.addEventListener("click",function(){
     window.location.href='login.html';
   }
 })
-///////////////////////////////////////////////////////////////////////////////////////////////////////// 
+// //////////////////////Animation Wow//////////////////////////////////////////////////////////
+new WOW().init();
+// /////////////////////////////////////////////////////////////

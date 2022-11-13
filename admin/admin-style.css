@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 
 * {
   margin: 0;
@@ -9,6 +9,7 @@
 body{
   font-family: "Poppins", sans-serif;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(../assets/images/other-image-fullscren-1-1920x900.jpg);
+  height: 100vh;
   background-size: cover;
 }
 
@@ -22,6 +23,10 @@ body{
   transition: 1s 0.7s ease-in-out;
   grid-template-columns: 1fr;
   z-index: 5;
+}
+.signIN-content{
+  text-align: center;
+  color: white;
 }
 
 form {

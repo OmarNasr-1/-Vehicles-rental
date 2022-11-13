@@ -86,6 +86,7 @@
 //         console.log(error);
 //     }
 // }
+
 var password = document.getElementById('password')
 var email = document.getElementById('email')
 var response = fetch(`https://car-rental-eg.herokuapp.com/getAllUser`);

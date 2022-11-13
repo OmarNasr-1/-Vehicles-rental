@@ -16,25 +16,67 @@
 
 <body>
 
-	<div class="container">
-		<div class="forms-container">
-		  <div class="signin">
-			<form method="post">
-				<label for="" class="text-uppercase text-sm">Username </label>
-				<input type="text" placeholder="Username" name="username" class="form-control mb">
-				<label for="" class="text-uppercase text-sm">Password</label>
-				<input type="password" placeholder="Password" name="password" class="form-control mb">
-				<button class="btn btn-outline-info btn-block mt-5" name="login" type="submit">LOGIN</button>
-			</form>
-		  </div>
-		</div>
-	</div>
+    <div class="container m-auto mt-5 logIN">
+      <div class="signIN-content">
+        <h3>HELLO , owner <i class="fa fa-smile-o" aria-hidden="true"></i></h3>
+        <p class="fs-5 text-uppercase ">
+          " if you have an account , just LOGIN "
+        </p>
+      </div>
+      <form class="w-75 m-auto needs-validation" novalidate>
+          <div class="col-md-6">
+            <input
+              class="form-control my-2"
+              placeholder="Name@email.com"
+              type="text"
+              id="email"
+              name="email"
+              value=""
+              required
+            />
+            <div class="invalid-feedback">Email is required</div>
+          </div>
+
+
+          
+          <div class="col-md-6">
+            <input
+              class="form-control my-2  "
+              placeholder="Enter password"
+              type="password"
+              id="password"
+              name="password"
+              value=""
+              required
+            />
+            <div class="invalid-feedback">Password is required</div>
+          </div>
+
+          <div class="col-md" id="incorrect"></div>
+
+          <button
+            type="submit"
+            class="btn btn-outline-primary w-25 m-auto my-3 col-md-6"
+            id="submitLogin"
+            onclick="login()"
+          >
+            Login 
+          </button>
+  
+         
+        </form>
+    </div>
+
+
+
+
 
 	<!-- Loading Scripts -->
 	<script src="../vendor/jquery/jquery-3.6.0.min.js"></script>
 	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-	<script src="../assets/js/main.js"></script>
+	<script src="adminlogin.js"></script>
+  <!-- <script src="../../test/index.html"></script> -->
 
 </body>
 

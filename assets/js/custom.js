@@ -44,9 +44,21 @@ $(document).ready(function(){
       $('#back-top a').click(function () {
           $('body,html').animate({
               scrollTop: 0
-          }, 1500);
+          }, 800);
           return false;
       });
   });
 
 });
+
+
+
+function logout(){
+    setTimeout(myfunction,1000)
+  }
+  function myfunction(){
+    localStorage.removeItem("data")
+    localStorage.removeItem("token")
+    location.href="login.html"
+  }
+ 

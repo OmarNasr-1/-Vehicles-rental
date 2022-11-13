@@ -29,11 +29,12 @@
             type="text"
             name="firstName"
             id="firstName"    
-            class="form-control"
+            class="form-control mb-2"
             placeholder="Enter Your First Name"
             value=""
             required
           />
+          <div id="firstNameAlert" class="alert alert-danger d-none">Please inter one number to capital and two number small. thanks</div>
           <div class="invalid-feedback">FirstName is required</div>
           <div class="valid-feedback">Done</div>
           
@@ -45,12 +46,14 @@
             type="text"
             name="lastName"
             id="lastName"
-            class="form-control"
+            class="form-control mb-2"
             placeholder="Enter Your Last Name"
             value=""
             required
           />
+          <div id="lastNameAlert" class="alert alert-danger d-none">Please inter one number to capital or small and three number small. thanks</div>
           <div class="invalid-feedback">LastName is required</div>
+          <div class="valid-feedback">Done</div>
         </div>
 
         <div class="col-md-12">
@@ -63,7 +66,10 @@
             value=""
             required
           />
+          <!-- <div id="emailAlert" class="alert alert-danger d-none">Please inter one number to capital or small and three number small. thanks</div> -->
           <div class="invalid-feedback">Email is required</div>
+          <div class="valid-feedback">Done</div>
+
         </div>
 
         <div class="col-md-12">
@@ -71,12 +77,14 @@
             type="number"
             name="phone"
             id="phone"
-            class="form-control"
+            class="form-control mb-2"
             placeholder="Enter Your phone"
             value=""
             required
           />
+          <div id="numberAlert" class="alert alert-danger d-none">Sorry, enter a valid phone number.</div>
           <div class="invalid-feedback">phone is required</div>
+          <div class="valid-feedback">Done</div>
         </div>
 
         <!-- <div class="col-md-12">
@@ -108,33 +116,40 @@
         <div class="col-md-6">
           <input
             type="password"
-            class="form-control"
+            class="form-control mb-2"
             id="password"
             name="password"
             required
             placeholder="Create Password"
             value=""
           />
+          <div id="passwordAlert" class="alert alert-danger d-none">Please write any letter or number from seven to fifteen. thanks</div>
           <div class="invalid-feedback">Password is required</div>
+          <div class="valid-feedback">Done</div>
+
         </div>
 
         <div class="col-md-6">
           <input
             type="password"
-            class="form-control"
+            class="form-control mb-2"
             id="cpassword"
             name="cpassword"
             required
             placeholder="Confirm Password"
             value=""
           />
-          <div class="invalid-feedback">Password is required</div>
+          <div id="cpasswordAlert" class="alert alert-danger d-none">Confirm Password Dont match password. </div>
+          <div class="invalid-feedback">cPassword is required</div>
+          <div class="valid-feedback">Done</div>
+
         </div>
 
         <div class="col-md-12" id="exist"></div>
 
         <button
           class="btn  w-50 m-auto"
+          disabled
           type="submit"
           id="sumbitBtn"
           onclick="signUp()"
@@ -146,6 +161,7 @@
            If You have an account :  
           <a href="Login.html">Log-In <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
         </p>
+
        </div>
     
 

@@ -6,7 +6,7 @@
 $(function () {
 
     "use strick";
-    var max = 100;
+    var max = 150;
   
     $("textarea").keyup(function () {
   
@@ -29,17 +29,6 @@ $(function () {
   });
   
 
- ///////////////////logout//////////////////////////////
- function logout(){
-   setTimeout(myfunction,1000)
- }
- function myfunction(){
-   localStorage.removeItem("data")
-   localStorage.removeItem("token")
-   location.href="login.html"
- }
-
-
 // ////////////////////////////////profile name in navbar///////////////////////////////////////////////
 
 try{
@@ -55,8 +44,9 @@ ${profile.lastName}
 document.getElementById("userName").innerHTML=col;
 }catch(profile){}
 // //////////////////////////////////////////End profile name in navbar//////////////////////////////////////////////////////////////
-
-
+// //////////////////////Animation Wow//////////////////////////////////////////////////////////
+new WOW().init();
+// /////////////////////////////////////////////////////////////
 
 
     
